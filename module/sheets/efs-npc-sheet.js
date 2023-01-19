@@ -1,15 +1,8 @@
-export default class EFSCharacterSheet extends ActorSheet {
+export default class EFSNPCSheet extends ActorSheet {
     static get defaultOptions() {
-        let tpl;
-        if (this.actor.data.type === "character") {
-            tpl = "systems/efs/templates/sheets/efs-character-sheet.html";
-        } else {
-            tpl = "systems/efs/templates/sheets/efs-npc-sheet.html";
-        }
-
         return mergeObject(super.defaultOptions, {
-            template: tpl,
-            height: 460,
+            template: "systems/efs/templates/sheets/efs-npc-sheet.html",
+            height: 200,
             width: 435,
         })
     }
@@ -39,7 +32,7 @@ export default class EFSCharacterSheet extends ActorSheet {
 
         await r.evaluate({async: true});
 
-        const heroMessage = game.i18n.localize("EFS.Message.Uses") + " <b>" + game.i18n.localize("EFS.Approaches." + id.charAt(0).toUpperCase() + id.slice(1)) + "</b> " + game.i18n.localize("EFS.Approaches.Singular").toLowerCase()
+        const heroMessage = game.i18n.localize("EFS.Message.Uses") + " <b>" + game.i18n.localize("EFS.Approaches.Action").toLowerCase()
         await r.toMessage({
             flavor: heroMessage,
             speaker: ChatMessage.getSpeaker({actor: this.actor})

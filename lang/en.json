@@ -6,6 +6,7 @@
       "DP": "Defeats"
     },
     "Approaches": {
+      "Action": "Action",
       "Singular": "Approach",
       "Plural": "Approaches",
       "Brutal": "Brutal",

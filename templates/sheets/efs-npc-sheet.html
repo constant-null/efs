@@ -7,13 +7,20 @@
                     <input name="name" class="efs text-input" value="{{actor.name}}"/>
                 </div>
                 <div>
-                    <span class="efs label">{{ localize 'EFS.Character.Class' }}</span>
-                    <input name="data.class" class="efs text-input" value="{{data.data.class}}"/>
-                </div>
-                <div>
                     <span class="efs label">{{ localize 'EFS.Character.DP' }}</span>
                     <input name="data.defeatPoints" class="efs text-input  short" value="{{data.data.defeatPoints}}"/>/
                     <input name="data.dp.max" class="efs text-input short" value="{{data.data.dp.max}}"/>
+                </div>
+                <div>
+                    <span id="brutal" class="efs label clickable">{{ localize 'EFS.Approaches.Action' }}</span>
+                    <select class="efs select" name="data.approaches.brutal">
+                        {{#select data.data.approaches.brutal}}
+                        <option value="6">d6</option>
+                        <option value="8">d8</option>
+                        <option value="10">d10</option>
+                        <option value="12">d12</option>
+                        {{/select}}
+                    </select>
                 </div>
             </div>
             <div class="flex">
@@ -21,50 +28,6 @@
                      width="128"/>
             </div>
         </div>
-        <h2 class="efs">{{localize 'EFS.Approaches.Plural'}}</h2>
-        <div>
-            <span id="brutal" class="efs label clickable">{{ localize 'EFS.Approaches.Brutal' }}</span>
-            <select class="efs select" name="data.approaches.brutal">
-                {{#select data.data.approaches.brutal}}
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                {{/select}}
-            </select>
-        </div>
-        <div>
-            <span id="flexible" class="efs label clickable">{{ localize 'EFS.Approaches.Flexible' }}</span>
-            <select class="efs select" name="data.approaches.flexible">
-                {{#select data.data.approaches.flexible}}
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                {{/select}}
-            </select>
-        </div>
-        <div>
-            <span id="smart" class="efs label clickable">{{ localize 'EFS.Approaches.Smart' }}</span>
-            <select class="efs select" name="data.approaches.smart">
-                {{#select data.data.approaches.smart}}
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                {{/select}}
-            </select>
-        </div>
-        <div>
-            <span id="charismatic" class="efs label clickable">{{ localize 'EFS.Approaches.Charismatic' }}</span>
-            <select class="efs select" name="data.approaches.charismatic">
-                {{#select data.data.approaches.charismatic}}
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                {{/select}}
-            </select>
-        </div>
+
     </section>
 </form>
