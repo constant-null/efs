@@ -2,7 +2,8 @@
   "EFS": {
     "Character": {
       "Name": "Имя",
-      "Class": "Класс"
+      "Class": "Класс",
+      "DP": "Поражения"
     },
     "Approaches": {
       "Singular": "Подход",

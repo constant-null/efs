@@ -1,7 +1,14 @@
 export default class EFSCharacterSheet extends ActorSheet {
     static get defaultOptions() {
+        let tpl;
+        if (this.actor.data.type === "character") {
+            tpl = "systems/efs/templates/sheets/efs-character-sheet.html";
+        } else {
+            tpl = "systems/efs/templates/sheets/efs-npc-sheet.html";
+        }
+
         return mergeObject(super.defaultOptions, {
-            template: "systems/efs/templates/sheets/efs-character-sheet.html",
+            template: tpl,
             height: 460,
             width: 435,
         })
@@ -28,12 +35,14 @@ export default class EFSCharacterSheet extends ActorSheet {
 
         const id = event.currentTarget.id;
         const diceSize = this.actor.data.data.approaches[id];
-        let r = new Roll("1d"+diceSize);
+        let r = new Roll("1d" + diceSize);
 
         await r.evaluate({async: true});
+
+        const heroMessage = game.i18n.localize("EFS.Message.Uses") + " <b>" + game.i18n.localize("EFS.Approaches." + id.charAt(0).toUpperCase() + id.slice(1)) + "</b> " + game.i18n.localize("EFS.Approaches.Singular").toLowerCase()
         await r.toMessage({
-            flavor: game.i18n.localize("EFS.Message.Uses") +" <b>"+game.i18n.localize("EFS.Approaches."+id.charAt(0).toUpperCase() + id.slice(1))+ "</b> "+game.i18n.localize("EFS.Approaches.Singular").toLowerCase(),
-            speaker: ChatMessage.getSpeaker({ actor: this.actor })
+            flavor: heroMessage,
+            speaker: ChatMessage.getSpeaker({actor: this.actor})
         });
     }
 

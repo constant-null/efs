@@ -2,7 +2,8 @@
   "EFS": {
     "Character": {
       "Name": "Name",
-      "Class": "Class"
+      "Class": "Class",
+      "DP": "Defeats"
     },
     "Approaches": {
       "Singular": "Approach",

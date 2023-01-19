@@ -25,6 +25,11 @@
     min-width: 2.5em;
 }
 
+.efs.text-input.short {
+    max-width: 1em;
+    min-width: 0em;
+}
+
 .efs.clickable {
     font-weight: bold;
     cursor: pointer;
