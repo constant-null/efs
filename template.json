@@ -1,0 +1,20 @@
+{
+  "Actor": {
+    "types": [
+      "character"
+    ],
+    "character": {
+      "class": "",
+      "dp": {
+        "value": 5,
+        "max": 5
+      },
+      "approaches": {
+        "brutal":  0,
+        "flexible": 0,
+        "smart": 0,
+        "charismatic": 0
+      }
+    }
+  }
+}

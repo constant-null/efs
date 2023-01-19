@@ -1,0 +1,19 @@
+{
+  "EFS": {
+    "Character": {
+      "Name": "Name",
+      "Class": "Class"
+    },
+    "Approaches": {
+      "Singular": "Approach",
+      "Plural": "Approaches",
+      "Brutal": "Brutal",
+      "Flexible": "Flexible",
+      "Smart": "Smart",
+      "Charismatic": "Charismatic"
+    },
+    "Message": {
+      "Uses": "Uses"
+    }
+  }
+}

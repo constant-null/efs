@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('public/fonts/Caveat.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Sofia Sans';
+    src: url('public/fonts/SofiaSans.ttf') format('truetype');
+}
+
+.efs {
+    font-family: 'Caveat', serif;
+    font-size: 1.4em;
+}
+
+.flex {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.efs.text-input, .efs.select {
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    min-height: 1.4em;
+    min-width: 2.5em;
+}
+
+.efs.clickable {
+    font-weight: bold;
+    cursor: pointer;
+}

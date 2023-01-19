@@ -1,0 +1,19 @@
+{
+  "EFS": {
+    "Character": {
+      "Name": "Имя",
+      "Class": "Класс"
+    },
+    "Approaches": {
+      "Singular": "Подход",
+      "Plural": "Подходы",
+      "Brutal": "Брутальный",
+      "Flexible": "Гибкий",
+      "Smart": "Мозговитый",
+      "Charismatic": "Харизматичный"
+    },
+    "Message": {
+      "Uses": "Использует"
+    }
+  }
+}
