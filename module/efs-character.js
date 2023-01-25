@@ -60,11 +60,15 @@ export default class EFSCharacter extends Actor {
 
     prepareData() {
         super.prepareData();
-        this.data.data.defeatPoints = this.data.data.dp.max - this.data.data.dp.value;
+        this._data.defeatPoints = this._data.dp.max - this._data.dp.value;
     }
 
-    prepareDerivedData() {
-        super.prepareDerivedData();
-
+    get _data() {
+        const v10 = game.release.generation >= 10;
+        if (v10) {
+            return this.system;
+        } else {
+            return this.data.data;
+        }
     }
 }

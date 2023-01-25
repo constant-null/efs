@@ -38,7 +38,7 @@ export default class EFSCharacterSheet extends ActorSheet {
         const diceSteps = ["6", "8", "10", "12", "20"];
 
         const id = event.currentTarget.id;
-        let diceSize = this.actor.data.data.approaches[id];
+        let diceSize = this.actor._data.approaches[id];
         if (this.heroic) {
             diceSize = diceSteps[diceSteps.indexOf(diceSize)+1]
         }
@@ -56,7 +56,7 @@ export default class EFSCharacterSheet extends ActorSheet {
     getData(options) {
         const context = super.getData(options);
         context.actor = this.actor;
-        context.data = this.actor.data;
+        context.data = this.actor._data;
         context.heroic = this.heroic;
         return context
     }

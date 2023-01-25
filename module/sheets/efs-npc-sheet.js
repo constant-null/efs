@@ -27,7 +27,7 @@ export default class EFSNPCSheet extends ActorSheet {
         event.preventDefault();
 
         const id = event.currentTarget.id;
-        const diceSize = this.actor.data.data.approaches[id];
+        const diceSize = this.actor._data.approaches[id];
         let r = new Roll("1d" + diceSize);
 
         await r.evaluate({async: true});
@@ -42,7 +42,7 @@ export default class EFSNPCSheet extends ActorSheet {
     getData(options) {
         const context = super.getData(options);
         context.actor = this.actor;
-        context.data = this.actor.data;
+        context.data = this.actor._data;
 
         return context
     }

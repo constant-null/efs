@@ -16,6 +16,11 @@
     },
     "Message": {
       "Uses": "Uses"
+    },
+    "HeroicMoment": "Heroic Moment",
+    "Sheets": {
+      "Character": "Hero",
+      "NPC": "NPC"
     }
   }
 }

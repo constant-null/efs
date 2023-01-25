@@ -5,7 +5,7 @@
   "author": "Lucius The Mage",
   "version": "1.1",
   "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "9.269",
+  "compatibleCoreVersion": "10.291",
   "esmodules": [
     "efs.js"
   ],
@@ -25,7 +25,7 @@
     }
   ],
   "url": "https://github.com/constant-null/efs",
-  "manifest": "https://raw.githubusercontent.com/constant-null/efs/master/system.json",
-  "download": "https://github.com/constant-null/efs/releases/download/1.1/efs-1.1.zip",
+  "manifest": "github.com/constant-null/efs/releases/latest/download/system.json",
+  "download": "https://github.com/constant-null/efs/releases/download/1.2/efs-1.2.zip",
   "license": "LICENSE"
 }
