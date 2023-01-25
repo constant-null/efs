@@ -1,4 +1,5 @@
 export default class EFSCharacterSheet extends ActorSheet {
+    heroic = false;
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             template: "systems/efs/templates/sheets/efs-character-sheet.html",
@@ -11,6 +12,14 @@ export default class EFSCharacterSheet extends ActorSheet {
         super.activateListeners(html)
 
         html.find(".clickable").click(this._approachClicked.bind(this));
+        html.find(".heroic-mode").click(this._heroicModeClicked.bind(this));
+    }
+
+    _heroicModeClicked(event) {
+        event.preventDefault();
+
+        this.heroic = !this.heroic;
+        this.render();
     }
 
     async _onSubmit(event, options) {
@@ -26,8 +35,13 @@ export default class EFSCharacterSheet extends ActorSheet {
     async _approachClicked(event) {
         event.preventDefault();
 
+        const diceSteps = ["6", "8", "10", "12", "20"];
+
         const id = event.currentTarget.id;
-        const diceSize = this.actor.data.data.approaches[id];
+        let diceSize = this.actor.data.data.approaches[id];
+        if (this.heroic) {
+            diceSize = diceSteps[diceSteps.indexOf(diceSize)+1]
+        }
         let r = new Roll("1d" + diceSize);
 
         await r.evaluate({async: true});
@@ -43,7 +57,7 @@ export default class EFSCharacterSheet extends ActorSheet {
         const context = super.getData(options);
         context.actor = this.actor;
         context.data = this.actor.data;
-
+        context.heroic = this.heroic;
         return context
     }
 }

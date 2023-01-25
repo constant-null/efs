@@ -62,4 +62,9 @@ export default class EFSCharacter extends Actor {
         super.prepareData();
         this.data.data.defeatPoints = this.data.data.dp.max - this.data.data.dp.value;
     }
+
+    prepareDerivedData() {
+        super.prepareDerivedData();
+
+    }
 }
