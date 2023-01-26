@@ -15,7 +15,8 @@
       "Charismatic": "Харизматичный"
     },
     "Message": {
-      "Uses": "Использует"
+      "Uses": "Использует",
+      "InHeroicMoment": "В свой <b>Героический Момент</b>"
     },
     "HeroicMoment": "Героический Момент",
     "Sheets": {

@@ -15,7 +15,8 @@
       "Charismatic": "Charismatic"
     },
     "Message": {
-      "Uses": "Uses"
+      "Uses": "Uses",
+      "InHeroicMoment": "In the <b>Heroic Moment</b>"
     },
     "HeroicMoment": "Heroic Moment",
     "Sheets": {

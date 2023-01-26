@@ -42,11 +42,13 @@ export default class EFSCharacterSheet extends ActorSheet {
         if (this.heroic) {
             diceSize = diceSteps[diceSteps.indexOf(diceSize)+1]
         }
-        let r = new Roll("1d" + diceSize);
+        let r = await new Roll("1d" + diceSize).evaluate({async: true});
 
-        await r.evaluate({async: true});
+        let heroMessage = game.i18n.localize("EFS.Message.Uses") + " <b>" + game.i18n.localize("EFS.Approaches." + id.charAt(0).toUpperCase() + id.slice(1)) + "</b> " + game.i18n.localize("EFS.Approaches.Singular").toLowerCase()
+        if (this.heroic) {
+            heroMessage = game.i18n.localize("EFS.Message.InHeroicMoment") + "<br/>" + heroMessage;
+        }
 
-        const heroMessage = game.i18n.localize("EFS.Message.Uses") + " <b>" + game.i18n.localize("EFS.Approaches." + id.charAt(0).toUpperCase() + id.slice(1)) + "</b> " + game.i18n.localize("EFS.Approaches.Singular").toLowerCase()
         await r.toMessage({
             flavor: heroMessage,
             speaker: ChatMessage.getSpeaker({actor: this.actor})
