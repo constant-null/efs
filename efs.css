@@ -35,7 +35,7 @@
     text-align: center;
 }
 
-.efs.clickable {
+.efs .clickable {
     font-weight: bold;
     cursor: pointer;
 }
@@ -90,9 +90,14 @@
 }
 
 .efs .description {
-    width: 60%;
+    width: 100%;
 }
 
 .efs .items {
-    width: 40%;
+    min-width: 40%;
+}
+
+.item-name {
+    display: flex;
+    justify-content: space-between;
 }

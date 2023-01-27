@@ -30,6 +30,12 @@
     },
     "Narator": "Закадровый Голос",
     "Extra": "Экстра",
-    "Description": "Описание"
+    "Description": "Описание",
+    "Dialog": {
+      "ActionConfirm": "Подтверждение действия",
+      "ConfirmDeletion": "Вы точно хотите удалить ",
+      "Yes": "Да",
+      "No": "Нет"
+    }
   }
 }

@@ -10,7 +10,14 @@
             <h2>{{localize 'EFS.Items'}}</h2>
             <div class="item-list">
                 {{#each items as |item|}}
-                    <div class="item-name">{{item.name}} {{#if (gt item._system.modifier 0)}}+{{item._system.modifier}}{{/if}}</div>
+                    <div class="item-name">
+                        <b>{{item.name}} {{#if (gt item._system.modifier 0)}}+{{item._system.modifier}}{{/if}}</b>
+                        <span class="item-control">
+                            <span data-id="{{item._id}}" class="edit-item clickable fa fa-edit"></span>
+                            <span data-id="{{item._id}}" class="delete-item clickable fa fa-trash"></span>
+                        </span>
+                    </div>
+
                     <div class="item-description">{{{item._system.description}}}</div>
                     <hr/>
                 {{/each}}

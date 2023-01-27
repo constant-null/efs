@@ -30,6 +30,12 @@
     },
     "Narator": "Narator",
     "Extra": "Extra",
-    "Description": "Description"
+    "Description": "Description",
+    "Dialog": {
+      "ActionConfirm": "Confirm action",
+      "ConfirmDeletion": "Are you sure that you want to delete ",
+      "Yes": "Yes",
+      "No": "No"
+    }
   }
 }
