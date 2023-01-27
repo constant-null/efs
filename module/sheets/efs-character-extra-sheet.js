@@ -1,7 +1,7 @@
 export default class EFSCharacterExtraSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            template: "systems/efs/templates/dialog/extra-dialog.html",
+            template: "systems/efs/templates/sheets/extra-dialog.html",
             height: 600,
             width: 600,
         })
@@ -10,6 +10,7 @@ export default class EFSCharacterExtraSheet extends ActorSheet {
     getData(options) {
         const context = super.getData(options);
         context.data = this.actor._system;
+        context.items = this.actor.items;
         return context;
     }
 }

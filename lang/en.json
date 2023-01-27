@@ -5,6 +5,11 @@
       "Class": "Class",
       "DP": "Defeats"
     },
+    "Item": {
+      "Name": "Name",
+      "Modifier": "Modifier"
+    },
+    "Items": "Items",
     "Approaches": {
       "Action": "Action",
       "Singular": "Approach",

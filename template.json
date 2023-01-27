@@ -19,5 +19,14 @@
         "description": ""
       }
     }
+  },
+  "Item": {
+    "types": [
+      "item"
+    ],
+    "item": {
+      "modifier": 0,
+      "description": ""
+    }
   }
 }

@@ -1,0 +1,28 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <section class="efs content">
+        <div class="header">
+            <div class="flex">
+                <div>
+                    <span class="efs label">{{ localize 'EFS.Item.Name' }}</span>
+                    <input name="name" class="efs text-input" value="{{item.name}}"/>
+                </div>
+                <div>
+                    <span class="efs label">{{ localize 'EFS.Item.Modifier' }}</span>
+                    <select class="efs select" name="data.modifier">
+                        {{#select data.modifier}}
+                        <option value="0">+0</option>
+                        <option value="1">+1</option>
+                        <option value="2">+2</option>
+                        <option value="3">+3</option>
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="128"/>
+            </div>
+        </div>
+        <h2>{{ localize 'EFS.Description' }}</h2>
+        {{editor data.description target="system.description" button=true editable=true}}
+    </section>
+</form>

@@ -1,0 +1,20 @@
+<form class="{{cssClass}}">
+    <section class="efs content columns">
+        <div class="description">
+            <h2>{{localize 'EFS.Description'}}</h2>
+            <div>
+                {{editor data.extra.description target="system.extra.description" button=true editable=true}}
+            </div>
+        </div>
+        <div class="items">
+            <h2>{{localize 'EFS.Items'}}</h2>
+            <div class="item-list">
+                {{#each items as |item|}}
+                    <div class="item-name">{{item.name}} {{#if (gt item._system.modifier 0)}}+{{item._system.modifier}}{{/if}}</div>
+                    <div class="item-description">{{{item._system.description}}}</div>
+                    <hr/>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</form>

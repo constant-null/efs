@@ -84,3 +84,15 @@
 .efs .editor .editor-content {
     min-height: 200px;
 }
+.efs.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.efs .description {
+    width: 60%;
+}
+
+.efs .items {
+    width: 40%;
+}
