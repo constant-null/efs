@@ -3,7 +3,7 @@
   "title": "Epic Fail (Былинный Отказ)",
   "description": "System for playing Open Versitale Anime Role-Playing Game (OVA)",
   "author": "Lucius The Mage",
-  "version": "1.3",
+  "version": "1.4",
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "10.291",
   "esmodules": [
@@ -26,6 +26,6 @@
   ],
   "url": "https://github.com/constant-null/efs",
   "manifest": "https://github.com/constant-null/efs/releases/latest/download/system.json",
-  "download": "https://github.com/constant-null/efs/releases/download/1.3/efs-1.3.zip",
+  "download": "https://github.com/constant-null/efs/releases/download/1.4/efs-1.4.zip",
   "license": "LICENSE"
 }
