@@ -13,6 +13,10 @@
     font-size: 1.4em;
 }
 
+.efs .fa {
+    font-size: .7em;;
+}
+
 .flex {
     display: inline-block;
     vertical-align: top;
@@ -26,8 +30,9 @@
 }
 
 .efs.text-input.short {
-    max-width: 1em;
-    min-width: 0em;
+    max-width: 1.1em;
+    min-width: 0;
+    text-align: center;
 }
 
 .efs.clickable {
@@ -70,4 +75,12 @@
 
 .heroic-mode span.active {
     text-shadow: 0 0 red;
+}
+
+.efs .editor {
+    height: 100%;
+}
+
+.efs .editor .editor-content {
+    min-height: 200px;
 }

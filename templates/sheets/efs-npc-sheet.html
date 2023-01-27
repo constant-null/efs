@@ -8,26 +8,26 @@
                 </div>
                 <div>
                     <span class="efs label">{{ localize 'EFS.Character.DP' }}</span>
-                    <input name="data.defeatPoints" class="efs text-input  short" value="{{data.defeatPoints}}"/>/
+                    <input name="data.defeatPoints" class="efs text-input short" value="{{data.defeatPoints}}"/>/
                     <input name="data.dp.max" class="efs text-input short" value="{{data.dp.max}}"/>
                 </div>
                 <div>
-                    <span id="brutal" class="efs label clickable">{{ localize 'EFS.Approaches.Action' }}</span>
+                    <span id="brutal" class="efs label clickable approach">{{ localize 'EFS.Approaches.Action' }}</span>
                     <select class="efs select" name="data.approaches.brutal">
                         {{#select data.approaches.brutal}}
                         <option value="6">d6</option>
                         <option value="8">d8</option>
                         <option value="10">d10</option>
                         <option value="12">d12</option>
+                        <option value="20">d20</option>
                         {{/select}}
                     </select>
                 </div>
             </div>
             <div class="flex">
-                <img src="{{actor.img}}" class="character-portrait" data-edit="img" title="{{actor.name}}" height="128"
-                     width="128"/>
+                <img src="{{actor.img}}" class="character-portrait" data-edit="img" title="{{actor.name}}" height="128"/>
             </div>
         </div>
-
+        <span id="extra" class="efs label clickable">{{ localize 'EFS.Extra' }} <span class="fa fa-caret-right"></span></span>
     </section>
 </form>

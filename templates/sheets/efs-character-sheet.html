@@ -24,7 +24,7 @@
             <div class="approaches-list">
                 <h2 class="efs">{{localize 'EFS.Approaches.Plural'}}</h2>
                 <div>
-                    <span id="brutal" class="efs label clickable">{{ localize 'EFS.Approaches.Brutal' }}</span>
+                    <span id="brutal" class="efs label clickable approach">{{ localize 'EFS.Approaches.Brutal' }}</span>
                     <select class="efs select" name="data.approaches.brutal">
                         {{#select data.approaches.brutal}}
                         <option value="6">d6</option>
@@ -35,7 +35,7 @@
                     </select>
                 </div>
                 <div>
-                    <span id="flexible" class="efs label clickable">{{ localize 'EFS.Approaches.Flexible' }}</span>
+                    <span id="flexible" class="efs label clickable approach">{{ localize 'EFS.Approaches.Flexible' }}</span>
                     <select class="efs select" name="data.approaches.flexible">
                         {{#select data.approaches.flexible}}
                         <option value="6">d6</option>
@@ -46,7 +46,7 @@
                     </select>
                 </div>
                 <div>
-                    <span id="smart" class="efs label clickable">{{ localize 'EFS.Approaches.Smart' }}</span>
+                    <span id="smart" class="efs label clickable approach">{{ localize 'EFS.Approaches.Smart' }}</span>
                     <select class="efs select" name="data.approaches.smart">
                         {{#select data.approaches.smart}}
                         <option value="6">d6</option>
@@ -58,7 +58,7 @@
                 </div>
                 <div>
                     <span id="charismatic"
-                          class="efs label clickable">{{ localize 'EFS.Approaches.Charismatic' }}</span>
+                          class="efs label clickable approach">{{ localize 'EFS.Approaches.Charismatic' }}</span>
                     <select class="efs select" name="data.approaches.charismatic">
                         {{#select data.approaches.charismatic}}
                         <option value="6">d6</option>
@@ -74,5 +74,7 @@
                 <span class="{{#if heroic}}active{{/if}}">{{localize 'EFS.HeroicMoment'}}</span>
             </div>
         </div>
+        <br/>
+        <span id="extra" class="efs label clickable">{{ localize 'EFS.Extra' }} <span class="fa fa-caret-right"></span></span>
     </section>
 </form>

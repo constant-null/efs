@@ -20,6 +20,10 @@ export default class EFSCharacter extends Actor {
         // Collect data
         const documentName = this.metadata.name;
         const types = ["character", "npc"];
+        const typeNames = {
+            "character": "EFS.Sheets.Character",
+            "npc": "EFS.Sheets.NPC",
+        }
         const folders = parent ? [] : game.folders.filter(f => (f.data.type === documentName) && f.displayed);
         const label = game.i18n.localize(this.metadata.label);
         const title = game.i18n.format("DOCUMENT.Create", { type: label });
@@ -32,8 +36,7 @@ export default class EFSCharacter extends Actor {
             hasFolders: folders.length >= 1,
             type: data.type || types[0],
             types: types.reduce((obj, t) => {
-                const label = CONFIG[documentName]?.typeLabels?.[t] ?? t;
-                obj[t] = game.i18n.has(label) ? game.i18n.localize(label) : t;
+                obj[t] = game.i18n.localize(typeNames[t]);
                 return obj;
             }, {}),
             hasTypes: types.length > 1
@@ -60,10 +63,10 @@ export default class EFSCharacter extends Actor {
 
     prepareData() {
         super.prepareData();
-        this._data.defeatPoints = this._data.dp.max - this._data.dp.value;
+        this._system.defeatPoints = this._system.dp.max - this._system.dp.value;
     }
 
-    get _data() {
+    get _system() {
         const v10 = game.release.generation >= 10;
         if (v10) {
             return this.system;
