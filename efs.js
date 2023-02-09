@@ -5,7 +5,7 @@ import EFSItem from "./module/efs-item.js";
 import EFSItemSheet from "./module/sheets/efs-item-sheet.js";
 
 Hooks.once("init", function () {
-    console.log("EFS | Initializing Epic Fail System");
+    console.log("EFS | Initializing Bylina Failure System");
     // CONFIG.debug.hooks = true;
 
     CONFIG.Actor.documentClass = EFSCharacter;
