@@ -12,7 +12,9 @@ export default class EFSCharacterExtraSheet extends ActorSheet {
 
         html.find(".edit-item").click(this._onEditItem.bind(this))
         html.find(".delete-item").click(this._onDeleteItem.bind(this))
+        html.find(".add-item").click(this._onAddItem.bind(this))
     }
+
 
     _onEditItem(event) {
         event.preventDefault();
@@ -43,6 +45,12 @@ export default class EFSCharacterExtraSheet extends ActorSheet {
                 }
             }
         }).render(true);
+    }
+
+    async _onAddItem(event) {
+        event.preventDefault();
+        const items = await this.actor.createEmbeddedDocuments("Item", [{name:game.i18n.localize("EFS.Item.DefaultName"), type:"item"}])
+        await items[0].sheet.render(true);
     }
 
     getData(options) {

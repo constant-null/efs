@@ -7,7 +7,8 @@
     },
     "Item": {
       "Name": "Name",
-      "Modifier": "Modifier"
+      "Modifier": "Modifier",
+      "DefaultName": "New Item"
     },
     "Items": "Items",
     "Approaches": {

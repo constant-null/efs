@@ -101,3 +101,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+.control-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}

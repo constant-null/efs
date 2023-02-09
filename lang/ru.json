@@ -7,7 +7,8 @@
     },
     "Item": {
       "Name": "Название",
-      "Modifier": "Модификатор"
+      "Modifier": "Модификатор",
+      "DefaultName": "Новый Предмет"
     },
     "Items": "Предметы",
     "Approaches": {
