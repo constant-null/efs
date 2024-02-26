@@ -1,7 +1,7 @@
 {
   "title": "Bylina Failure (Былинный Отказ)",
   "description": "The official system for Bylina Failure game. Официальная система для игры Былинный отказ",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "compatibility": {
     "minimum": "9",
     "verified": "11"
