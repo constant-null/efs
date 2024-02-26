@@ -1,11 +1,11 @@
 {
-  "name": "efs",
   "title": "Bylina Failure (Былинный Отказ)",
   "description": "The official system for Bylina Failure game. Официальная система для игры Былинный отказ",
-  "author": "Mark Belotskiy",
-  "version": "1.6.1",
-  "minimumCoreVersion": "9",
-  "compatibleCoreVersion": "10.291",
+  "version": "1.6.2",
+  "compatibility": {
+    "minimum": "9",
+    "verified": "11"
+  },
   "esmodules": [
     "efs.js"
   ],
@@ -16,16 +16,19 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "ru",
       "name": "Русский",
-      "path": "lang/ru.json"
+      "path": "lang/ru.json",
+      "flags": {}
     }
   ],
   "url": "https://github.com/constant-null/efs",
   "manifest": "https://github.com/constant-null/efs/releases/latest/download/system.json",
-  "download": "https://github.com/constant-null/efs/releases/download/1.6.1/efs-1.6.1.zip",
-  "license": "LICENSE"
+  "download": "https://github.com/constant-null/efs/archive/refs/heads/master.zip",
+  "license": "LICENSE",
+  "id": "efs"
 }

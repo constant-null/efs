@@ -15,7 +15,6 @@ export default class EFSCharacterExtraSheet extends ActorSheet {
         html.find(".add-item").click(this._onAddItem.bind(this))
     }
 
-
     _onEditItem(event) {
         event.preventDefault();
 

@@ -6,8 +6,8 @@ export default class EFSCharacter extends Actor {
                 actorLink: subtype === "character",
                 disposition: subtype === "character" ? 1 : -1,
                 vision: subtype === "character",
-                displayBars: 40,
-                bar1: {attribute: "dp"},
+                // displayBars: 40,
+                // bar1: {attribute: "dp"},
             }
         }
 
