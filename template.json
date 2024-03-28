@@ -5,13 +5,15 @@
     ],
     "character": {
       "class": "",
+      "rank": "",
+      "credits": 0,
       "dp": {
         "value": 5,
         "max": 5
       },
       "approaches": {
         "brutal":  0,
-        "flexible": 0,
+        "skillful": 0,
         "smart": 0,
         "charismatic": 0
       },

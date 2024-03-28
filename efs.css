@@ -17,9 +17,18 @@
     font-size: .7em;;
 }
 
+.photo {
+    font-size: small;
+}
+
+.flex.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .flex {
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    flex-direction: column;
 }
 
 .efs.text-input, .efs.select {

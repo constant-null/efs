@@ -7,7 +7,7 @@ export default class EFSCharacterSheet extends ActorSheet {
         return mergeObject(super.defaultOptions, {
             template: "systems/efs/templates/sheets/efs-character-sheet.html",
             height: 460,
-            width: 435,
+            width: 600,
         })
     }
 
